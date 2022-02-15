@@ -1,11 +1,12 @@
 var last_position_of_x,last_position_of_y;
-canvas=document.getElementById("my_canvas");
-ctx=canvas.getContext("2d");
 color="navy";
 width_of_line=2;
+canvas=document.getElementById('my_canvas');
+ctx=canvas.getContext("2d");
+
 var width=screen.width;
 new_width=screen.width-70;
-var height=screen.height;
+//var height=screen.height;
 new_height=screen.height-300;
 if(width<992)
 {
@@ -16,7 +17,7 @@ if(width<992)
 canvas.addEventListener("touchstart",my_touchstart);
 function my_touchstart(e)
 {
-    console.log("my_touch_start");
+    console.log("my_touchstart");
     color=document.getElementById("color").value;
     
     width_of_line=document.getElementById("width_of_line").value;
@@ -26,7 +27,7 @@ function my_touchstart(e)
 }
 function my_touchmove(e)
 {
-    console.log("my_touch_move");
+    console.log("my_touchmove");
     current_position_of_touch_x=e.touches[0].clientX-canvas.offsetLeft;
     current_position_of_touch_y=e.touches[0].clientY-canvas.offsetTop;
 
